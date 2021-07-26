@@ -1,5 +1,12 @@
 # Changelog
 
+## \[0.1.5]
+
+- Fix blur/focus events being incorrect on Windows.
+  - [d832d575](https://www.github.com/tauri-apps/tauri/commit/d832d575d9b03a0ff78accabe4631cc638c08c3b) fix(windows): use webview events on windows ([#2277](https://www.github.com/tauri-apps/tauri/pull/2277)) on 2021-07-23
+- Fix the error "cannot find type MenuHash in this scope"
+  - [226414d1](https://www.github.com/tauri-apps/tauri/commit/226414d1a588c8bc2b540a71fcd84c318319d6af) "cannot find type `MenuHash` in this scope" ([#2240](https://www.github.com/tauri-apps/tauri/pull/2240)) on 2021-07-20
+
 ## \[0.1.4]
 
 - Allow preventing window close when the user requests it.

@@ -1,5 +1,11 @@
 # Changelog
 
+## \[1.0.0-beta.4]
+
+- Fixes minimum window height being used as maximum height.
+  - Bumped due to a bump in tauri-utils.
+  - [e3f99165](https://www.github.com/tauri-apps/tauri/commit/e3f9916526b226866137cb663e5cafab2b6a0e01) fix(core) minHeight being used as maxHeight ([#2247](https://www.github.com/tauri-apps/tauri/pull/2247)) on 2021-07-19
+
 ## \[1.0.0-beta.3]
 
 - Improve ESM detection with regexes.

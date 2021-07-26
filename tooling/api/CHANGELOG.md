@@ -1,5 +1,16 @@
 # Changelog
 
+## \[1.0.0-beta.6]
+
+- `bundle` now exports `clipboard` module so you can `import { clipboard } from "@tauri-apps/api"`.
+  - [4f88c3fb](https://www.github.com/tauri-apps/tauri/commit/4f88c3fb94286f3daafb906e3513c9210ecfa76b) fix(api.js): `bundle` now exports `clipboard` mod, closes [#2243](https://www.github.com/tauri-apps/tauri/pull/2243) ([#2244](https://www.github.com/tauri-apps/tauri/pull/2244)) on 2021-07-19
+- Fix double window creation
+  - [9fbcc024](https://www.github.com/tauri-apps/tauri/commit/9fbcc024542d87f71afd364acdcf2302cf82912c) fix(api.js): fix double window creation, closes [#2284](https://www.github.com/tauri-apps/tauri/pull/2284) ([#2285](https://www.github.com/tauri-apps/tauri/pull/2285)) on 2021-07-23
+- Fix `@ts-expect` error usage
+  - [dd52e738](https://www.github.com/tauri-apps/tauri/commit/dd52e738f1fd323bd8d185d6e650f412eb031200) fix(api.js): fix `@ts-expect-error` usage, closes [#2249](https://www.github.com/tauri-apps/tauri/pull/2249) ([#2250](https://www.github.com/tauri-apps/tauri/pull/2250)) on 2021-07-20
+- Fixes the global bundle UMD code.
+  - [268450b1](https://www.github.com/tauri-apps/tauri/commit/268450b1329a4b55f2043890c565a8563f890c3a) fix(api): global bundle broken code, closes [#2289](https://www.github.com/tauri-apps/tauri/pull/2289) ([#2297](https://www.github.com/tauri-apps/tauri/pull/2297)) on 2021-07-26
+
 ## \[1.0.0-beta.5]
 
 - Adds `convertFileSrc` helper to the `tauri` module, simplifying the process of using file paths as webview source (`img`, `video`, etc).

@@ -1,5 +1,10 @@
 # Changelog
 
+## \[1.0.0-beta.4]
+
+- Add Svelte recipe using the official template.
+  - [151c3157](https://www.github.com/tauri-apps/tauri/commit/151c3157bef28c267592ebdf717e4ff66a5b27e1) Add svelte recipe to create-tauri-app ([#2276](https://www.github.com/tauri-apps/tauri/pull/2276)) ([#2279](https://www.github.com/tauri-apps/tauri/pull/2279)) on 2021-07-22
+
 ## \[1.0.0-beta.3]
 
 - Added Angular CLI recipe.

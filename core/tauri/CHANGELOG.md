@@ -1,5 +1,21 @@
 # Changelog
 
+## \[1.0.0-beta.6]
+
+- Fix blur/focus events being incorrect on Windows.
+  - [d832d575](https://www.github.com/tauri-apps/tauri/commit/d832d575d9b03a0ff78accabe4631cc638c08c3b) fix(windows): use webview events on windows ([#2277](https://www.github.com/tauri-apps/tauri/pull/2277)) on 2021-07-23
+- Change `App.create_window()` and `AppHandle.create_window()` to accept an `Into<String>` type instead of `String`.
+  - [8216cba1](https://www.github.com/tauri-apps/tauri/commit/8216cba13da10b272aae8e5058b1ec2cc937e196) `App.create_window()` to accept any `Into<String>` type (fix [#2290](https://www.github.com/tauri-apps/tauri/pull/2290)) ([#2291](https://www.github.com/tauri-apps/tauri/pull/2291)) on 2021-07-26
+- Fixes `app.listen_global` not receiving events emitted in javascript.
+  - [a8c1de55](https://www.github.com/tauri-apps/tauri/commit/a8c1de5547cd3968aa238a06c410cb936391db5d) fix listen_global not listening to events with a window label ([#2272](https://www.github.com/tauri-apps/tauri/pull/2272)) on 2021-07-23
+- Fixes minimum window height being used as maximum height.
+  - [e3f99165](https://www.github.com/tauri-apps/tauri/commit/e3f9916526b226866137cb663e5cafab2b6a0e01) fix(core) minHeight being used as maxHeight ([#2247](https://www.github.com/tauri-apps/tauri/pull/2247)) on 2021-07-19
+- Use [`Url.join()`](https://docs.rs/url/2.2.2/url/struct.Url.html#method.join) when building webview URLs in
+  `WindowManager`, to handle edge cases and leading/trailing slashes in paths and urls.
+  - [31685c9f](https://www.github.com/tauri-apps/tauri/commit/31685c9f9d9c2f12d3debc3189ed67e8d669f3d8) fix([#2281](https://www.github.com/tauri-apps/tauri/pull/2281)): Prevent double slashes when joining URLs ([#2282](https://www.github.com/tauri-apps/tauri/pull/2282)) on 2021-07-23
+- Force data directory even on non-local window.
+  - [70a19414](https://www.github.com/tauri-apps/tauri/commit/70a1941468f55f0dc09ac2e13802945891d766f4) fix(core): Force data_directory on Windows ([#2288](https://www.github.com/tauri-apps/tauri/pull/2288)) on 2021-07-23
+
 ## \[1.0.0-beta.5]
 
 - Allow preventing window close when the user requests it.
