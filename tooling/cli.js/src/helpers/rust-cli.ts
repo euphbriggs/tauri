@@ -2,15 +2,15 @@
 // SPDX-License-Identifier: Apache-2.0
 // SPDX-License-Identifier: MIT
 
-import { CargoManifest } from '../types/cargo'
 import { existsSync } from 'fs'
-import { resolve, join, dirname } from 'path'
-import { spawnSync, spawn } from './spawn'
-import { downloadCli } from './download-binary'
+import { dirname, resolve } from 'path'
 import { fileURLToPath } from 'url'
 // Webpack reads the file at build-time, so this becomes a static var
 // @ts-expect-error
 import manifest from '../../../cli.rs/Cargo.toml'
+import { CargoManifest } from '../types/cargo'
+import { downloadCli } from './download-binary'
+import { spawn, spawnSync } from './spawn'
 const tauriCliManifest = manifest as CargoManifest
 
 const currentDirName = dirname(fileURLToPath(import.meta.url))
@@ -19,11 +19,8 @@ export async function runOnRustCli(
   command: string,
   args: string[]
 ): Promise<{ pid: number; promise: Promise<void> }> {
-  const targetPath = resolve(currentDirName, '../..')
-  const targetCliPath = join(
-    targetPath,
-    'bin/tauri-cli' + (process.platform === 'win32' ? '.exe' : '')
-  )
+  const targetPath = resolve(__dirname, '../..')
+  const targetCliPath = 'C:\\Users\\Ben\\.cargo\\bin\\cargo-tauri.exe'
 
   let resolveCb: () => void
   let rejectCb: () => void
